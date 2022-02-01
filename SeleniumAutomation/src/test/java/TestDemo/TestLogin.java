@@ -24,7 +24,6 @@ public class TestLogin {
 	public void testLogin() throws InterruptedException {
 
 		driver.get("https://www.saucedemo.com/");
-		//driver.manage().timeouts().implicitlyWait(30,TimeUnit.SECONDS);
 		driver.findElement(By.id("user-name")).sendKeys("DemoUser");
 		driver.findElement(By.id("password")).sendKeys("password");
 		driver.findElement(By.id("login-button")).click();
