@@ -10,14 +10,13 @@ import org.testng.annotations.Test;
 import io.github.bonigarcia.wdm.WebDriverManager;
 
 public class TestLogin {
-	
-	WebDriver driver=null;
-	
+
+	WebDriver driver = null;
+
 	@BeforeTest
-	public void BeforeSetUp()
-	{
+	public void BeforeSetUp() {
 		WebDriverManager.edgedriver().setup();
-		driver=new EdgeDriver();
+		driver = new EdgeDriver();
 	}
 
 	@Test
@@ -28,14 +27,12 @@ public class TestLogin {
 		driver.findElement(By.id("password")).sendKeys("password");
 		driver.findElement(By.id("login-button")).click();
 	}
-	
+
 	@AfterTest
-	public void AfterMethod()
-	{
+	public void AfterMethod() {
 		driver.close();
 		driver.quit();
 		System.out.println("Test Executed successfully");
 	}
 
 }
- 
